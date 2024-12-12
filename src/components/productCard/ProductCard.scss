@@ -1,0 +1,51 @@
+.product-card {
+    background-color: transparent;
+    display: flex;
+
+    &:hover .product-card-img {
+        opacity: 1;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+
+    .product-card-img {
+        background-color: #eceff1;
+        opacity: 0.97;
+
+        img {
+            height: 100%;
+
+        }
+    }
+
+    .product-card-text {
+        height: 125px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+        padding: 2%;
+        word-break: break-word;
+
+        .product-card-text-component_tittle {
+            p {
+                color: black;
+                font-weight: 600;
+                text-decoration: none;
+                width: 100%;
+            }
+        }
+
+        .product-card-text-component_price {
+            padding-top: 3px;
+            font-weight: 600;
+
+        }
+    }
+}
