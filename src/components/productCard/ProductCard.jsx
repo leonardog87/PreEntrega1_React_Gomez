@@ -1,15 +1,17 @@
 import './ProductCard.scss'
+import { Link } from 'react-router-dom'
 
-const ProductCard = ({ children, id, url, alt, title, description, price, quantity}) => {
+
+const ProductCard = ({ children, id, url, alt, title, description, price, quantity }) => {
 
     return (
         <>
             <div className="product-card">
-                <a href="#!">
+                <Link to={"/ProductCard/" + id}>
                     <div className="product-card-img">
                         <img id={id} src={url} alt={alt} />
                     </div>
-                </a>
+                </Link>
                 <div className="product-card-text">
                     <div className="product-card-text-component_tittle">
                         <p className="product-card-title">{title}</p>

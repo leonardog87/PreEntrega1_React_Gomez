@@ -8,6 +8,17 @@ nav {
     padding-bottom: 5px;
     justify-items: center;
 
+    .link-border-bottom {
+        cursor: pointer;
+        color: black;
+        text-decoration: none;
+    
+        &:hover {
+            padding-bottom: 3px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.617);
+        }
+    }
+
     .nav-links {
         height: 100%;
         width: 100%;

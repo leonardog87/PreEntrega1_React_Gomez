@@ -1,6 +1,8 @@
 import './ProductDetail.scss';
 
-const ProductDetail = () => {
+
+const ProductDetail = ({ children, id, url, alt, title, description, price, quantity }) => {
+// const ProductDetail = () => {
 return (
     <>
         <div className="product-detail-container">
@@ -9,6 +11,7 @@ return (
                 <div className="product-detail-gallery">
                     <div className="product-detail-gallery-box">
                         <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt=""/></a>
+                        {/* <img id={id} src={url} alt={alt} /> */}
                     </div>
                     <div className="product-detail-gallery-box">
                         <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt=""/></a>

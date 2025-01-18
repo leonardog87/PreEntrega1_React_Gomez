@@ -14,20 +14,22 @@ function App() {
 
   return (
     <>
+      <BrowserRouter>
+        <CartProvider />
+        <Announcement />
+        <Navbar >
+          <Cart />
+        </Navbar>
+        <Routes>
+          <Route path="/" element={<CartProvider><Banner /><CarouselProducts /></CartProvider>} />
+          <Route path="/ProductDetail" element={<ProductDetail />} />
+          <Route path="/ProductCard" element={<ProductCard />} />
+        </Routes>
+        <footer>
+          <Footer />
+        </footer>
+      </BrowserRouter>
 
-<BrowserRouter>
-      <Announcement />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<CartProvider><Banner /><CarouselProducts /></CartProvider>} />
-        <Route path="/ProductDetail" element={<ProductDetail />} />
-        <Route path="/ProductCard" element={<ProductCard />} />
-      </Routes>
-      <footer>
-        <Footer />
-      </footer>
-    </BrowserRouter>
-  
       {/* <CartProvider>
         <Cart />
         <header>
