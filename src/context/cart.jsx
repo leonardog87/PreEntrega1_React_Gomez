@@ -15,7 +15,11 @@ export function CartProvider({ children }) {
 
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem('cart'));
+<<<<<<< HEAD
         if (storedCart.length > 0) {
+=======
+        if (storedCart.length > 1) {
+>>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
             setCart(storedCart);
         }
     }, []);
