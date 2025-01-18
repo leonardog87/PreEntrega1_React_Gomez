@@ -1,0 +1,28 @@
+.nav-logo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        height: 100px;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 320px) {
+    .nav-logo {
+        img {
+            width: 150px;
+        }
+    }
+}
+
+@media (min-width: 970px) {
+    .nav-logo {
+        height: 105px;
+        justify-content: start;
+        padding-left: 10%;
+    }
+}
