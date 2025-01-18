@@ -1,6 +1,4 @@
 import './Footer.scss'
-import LinksGroup from '../linksGroup/LinksGroup'
-import Link from '../link/Link'
 
 const Footer = () => {
 
@@ -8,10 +6,10 @@ const Footer = () => {
         <>
             <div className="footer-politics">
                 <ul>
-                    <Link text="Sobre Nosotros" />
-                    <Link text="Términos y Condiciones" />
-                    <Link text="Políticas de Privacidad" />
-                    <Link text="Reclamos" />
+                <li><a href="#!">Sobre nosotros</a></li>
+                <li><a href="#!">Términos y condiciones</a></li>
+                <li><a href="#!">Políticas de privacidad</a></li>
+                <li><a href="#!">Reclamos</a></li>
                 </ul>
             </div>
             <div className="footer-rights">

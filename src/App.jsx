@@ -6,31 +6,42 @@ import Footer from './components/footer/Footer'
 import Cart from './components/cart/Cart'
 import CarouselProducts from './components/carouselProducts/CarouselProducts'
 import { CartProvider } from './context/cart'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ProductDetail from './components/productDetail/ProductDetail'
+import ProductCard from './components/productCard/ProductCard'
 
 function App() {
 
   return (
     <>
 
-    <CartProvider>
-
-      <Cart />
-      <header>
-        <Announcement />
-        <Navbar />
-      </header>
-
-      <main className="core-container">
-        <Banner />
-        <CarouselProducts />
-      </main>
-
+<BrowserRouter>
+      <Announcement />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<CartProvider><Banner /><CarouselProducts /></CartProvider>} />
+        <Route path="/ProductDetail" element={<ProductDetail />} />
+        <Route path="/ProductCard" element={<ProductCard />} />
+      </Routes>
       <footer>
         <Footer />
       </footer>
-
-      </CartProvider>
-
+    </BrowserRouter>
+  
+      {/* <CartProvider>
+        <Cart />
+        <header>
+          <Announcement />
+          <Navbar />
+        </header>
+        <main className="core-container">
+          <Banner />
+          <CarouselProducts />
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </CartProvider> */}
     </>
   )
 }
