@@ -2,277 +2,121 @@
     {
         "id": "1",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$72.999",
         "url": "src/assets/images/runnig-yellow.png",
         "alt": "runnig-yellow",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",
-        "price": "$72.999",
-        "url" : "src/assets/images/runnig-yellow.png",
-        "alt": "runnig-yellow"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "2",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$89.199",
         "url": "src/assets/images/running-black-skyblue.png",
         "alt": "running-black-skyblue",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",
-        "price": "$ 89.199",
-        "url" : "src/assets/images/running-black-skyblue.png",
-        "alt": "running-black-skyblue"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "3",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$95.000",
         "url": "src/assets/images/running-grey-black-red.png",
         "alt": "running-grey-black-red",
         "quantity": "1",
         "sex": "women"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",
-        "price": "$95.000",
-        "url" : "src/assets/images/running-grey-black-red.png",
-        "alt": "running-grey-black-red"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "4",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$88.500",
         "url": "src/assets/images/running-red-black.png",
         "alt": "running-red-black",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",
-        "price": "$88.500",
-        "url" : "src/assets/images/running-red-black.png",
-        "alt": "running-red-black"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "5",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$120.900",
         "url": "src/assets/images/running-skyblue-orange.png",
         "alt": "running-skyblue-orange",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",
-        "price": "$120.900",
-        "url" : "src/assets/images/running-skyblue-orange.png",
-        "alt": "running-skyblue-orange"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "6",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$105.000",
         "url": "src/assets/images/running-skyblue-orange-white.png",
         "alt": "running-skyblue-orange-white",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",
-        "price": "$105.000",
-        "url" : "src/assets/images/running-skyblue-orange-white.png",
-        "alt": "running-skyblue-orange-white"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "7",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$95.000",
         "url": "src/assets/images/running-w-grey-pink.png",
         "alt": "running-w-grey-pink",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",
-        "price": "$95.000",
-        "url" : "src/assets/images/running-w-grey-pink.png",
-        "alt": "running-w-grey-pink"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "8",
         "title": "Air Force",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Running",
         "price": "$70.000",
         "url": "src/assets/images/running-white.png",
         "alt": "running-white",
         "quantity": "1",
         "sex": "women"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Running",        
-        "price": "$70.000",
-        "url" : "src/assets/images/running-white.png",
-        "alt": "running-white"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "9",
         "title": "Jordan",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Street",
         "price": "$85.000",
         "url": "src/assets/images/jordan-black-red.png",
         "alt": "jordan-black-red",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Street",
-        "price": "$85.000",
-        "url" : "src/assets/images/jordan-black-red.png",
-        "alt": "jordan-black-red"
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "10",
         "title": "Freedom",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Futbol",
         "price": "$93.500",
         "url": "src/assets/images/botin-classic.png",
         "alt": "botin-classic",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Futbol",
-        "price": "$93.500",
-        "url" : "src/assets/images/botin-classic.png",
-        "alt": "botin-classic"        
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "11",
         "price": "$68.000",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "title": "Elite",
         "description": "Box",
         "url": "src/assets/images/box-blue-black.png",
         "alt": "box-blue-black",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "title": "Elite",  
-        "description" : "Box",      
-        "url" : "src/assets/images/box-blue-black.png",
-        "alt": "box-blue-black"        
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     },
     {
         "id": "12",
         "title": "Aventure",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
         "description": "Trekking",
         "price": "$87.000",
         "url": "src/assets/images/trekking-black.png",
         "alt": "trekking-black",
         "quantity": "1",
         "sex": "men"
-<<<<<<< HEAD
-=======
-=======
-        "description" : "Trekking",
-        "price": "$87.000",
-        "url" : "src/assets/images/trekking-black.png",
-        "alt": "trekking-black"        
->>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
->>>>>>> 0a3168d9d118d561448b3c2ee617d90fe8cf69df
     }
 ]
