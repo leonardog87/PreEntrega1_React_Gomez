@@ -1,6 +1,10 @@
 import './ProductCard.scss'
 
+<<<<<<< HEAD
 const ProductCard = ({ children, id, url, alt, title, description, price, quantity}) => {
+=======
+const ProductCard = ({ children, id, url, alt, title, description, price }) => {
+>>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
 
     return (
         <>

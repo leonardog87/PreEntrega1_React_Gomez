@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .link-border-bottom {
     cursor: pointer;
     color: black;
@@ -8,3 +9,15 @@
         border-bottom: 2px solid rgba(0, 0, 0, 0.617);
     }
 }
+=======
+
+.link-border-bottom {
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            padding-bottom: 3px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.617);
+        }
+    }
+>>>>>>> f1bfd095ceb97ce2bbffddaffb70b2144fdd6838
