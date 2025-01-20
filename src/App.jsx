@@ -9,25 +9,37 @@ import { CartProvider } from './context/cart'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProductDetail from './components/productDetail/ProductDetail'
 import ProductCard from './components/productCard/ProductCard'
+import ProductDetailContainer from './components/productDetailContainer/ProductDetailContainer'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <CartProvider />
-        <Announcement />
-        <Navbar >
-          <Cart />
-        </Navbar>
-        <Routes>
-          <Route path="/" element={<CartProvider><Banner /><CarouselProducts /></CartProvider>} />
-          <Route path="/ProductDetail" element={<ProductDetail />} />
-          <Route path="/ProductCard" element={<ProductCard />} />
-        </Routes>
+        <CartProvider>
+          <Announcement />
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={<><Banner /><CarouselProducts /></>} />
+            <Route
+              path="/ProductDetail"
+              element={<ProductDetail />} />
+            <Route
+              path="/ProductCard"
+              element={<><Banner /><CarouselProducts><ProductCard /></CarouselProducts></>} />
+
+            <Route
+              path="/ProductDatailContainer"
+              element={<><ProductDetailContainer /></>} />
+
+          </Routes>
+        </CartProvider>
         <footer>
           <Footer />
         </footer>
+
       </BrowserRouter>
 
       {/* <CartProvider>
