@@ -1,5 +1,5 @@
-Se agrego como plantilla del detalle al componente ProductDetail.
-Se copio y modifico como plantilla al componente ProductDetail con diferente directorio (ProductDetail Copy).
+Se agrego como plantilla del detalle al componente ProductDetailEx.
+Se copio y modifico la plantilla ProductDetailEx para recibir parametros.
 Se agrego como contenedor del ProductDetail al contenedor/componente ContainerProductDetail.
 
 

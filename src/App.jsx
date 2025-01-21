@@ -7,7 +7,7 @@ import Cart from './components/cart/Cart'
 import CarouselProducts from './components/carouselProducts/CarouselProducts'
 import { CartProvider } from './context/cart'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductDetail from './components/productDetail/ProductDetail'
+import ProductDetailEx from './components/productDetailEx/ProductDetailEx'
 import ProductCard from './components/productCard/ProductCard'
 import ProductDetailContainer from './components/productDetailContainer/ProductDetailContainer'
 
@@ -24,8 +24,8 @@ function App() {
               path="/"
               element={<><Banner /><CarouselProducts /></>} />
             <Route
-              path="/ProductDetail"
-              element={<ProductDetail />} />
+              path="/ProductDetailEx"
+              element={<ProductDetailEx />} />
             <Route
               path="/ProductCard"
               element={<><Banner /><CarouselProducts><ProductCard /></CarouselProducts></>} />

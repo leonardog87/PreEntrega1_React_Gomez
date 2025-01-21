@@ -1,7 +1,7 @@
 import './CarouselProducts.scss'
 import ProductCard from '../productCard/ProductCard';
 import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
-import UseFecth from '../../hooks/UseFetch';
+import UseFetch from '../../hooks/UseFetch';
 // import { useState } from 'react';
 import { useCart } from '../../hooks/useCart';
 // import { CartProvider } from '../../context/cart';
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const CarouselProducts = () => {
 
-    const { data } = UseFecth('./src/json/products.json')
+    const { data } = UseFetch('./src/json/products.json')
     const { addToCart } = useCart()
 
     return (

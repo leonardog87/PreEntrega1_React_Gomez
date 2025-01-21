@@ -1,6 +1,7 @@
 import './ProductDetail.scss';
 
-const ProductDetail = () => {
+const ProductDetail = ({ id, url, alt, title, description, price }) => {
+
     return (
         <>
             <div className="product-detail-container">
@@ -8,30 +9,30 @@ const ProductDetail = () => {
                 <div className="product-detail-container-gallery-img">
                     <div className="product-detail-gallery">
                         <div className="product-detail-gallery-box">
-                            <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt="" /></a>
-                            {/* <img id={id} src={url} alt={alt} /> */}
+                            {/* <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt="" /></a> */}
+                            <a><img id={id} src={url} alt={alt} /></a>
                         </div>
                         <div className="product-detail-gallery-box">
-                            <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt="" /></a>
+                            <a><img id={id} src={url} alt={alt} /></a>
                         </div>
                         <div className="product-detail-gallery-box">
-                            <a><img src="src/assets/images/jordan-black-red.png" alt="" /></a>
+                            <a><img id={id} src={url} alt={alt} /></a>
                         </div>
                         <div className="product-detail-gallery-box">
-                            <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt="" /></a>
+                            <a><img id={id} src={url} alt={alt} /></a>
                         </div>
                         <div className="product-detail-gallery-box">
-                            <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt="" /></a>
+                            <a><img id={id} src={url} alt={alt} /></a>
                         </div>
                         <div className="product-detail-gallery-box">
-                            <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt="" /></a>
+                            <a><img id={id} src={url} alt={alt} /></a>
                         </div>
                         <div className="product-detail-gallery-box">
-                            <a href="#!"><img src="src/assets/images/jordan-black-red.png" alt="" /></a>
+                            <a><img id={id} src={url} alt={alt} /></a>
                         </div>
                     </div>
                     <div className="product-detail-img">
-                        <img src="src/assets/images/jordan-black-red.png" alt="" />
+                        <a><img id={id} src={url} alt={alt} /></a>
                     </div>
                 </div>
 
@@ -39,15 +40,13 @@ const ProductDetail = () => {
                     <div className="product-detail-description">
                         <div className="product-detail-description-text">
                             <div className="product-detail-description-text_title">
-                                <h2>Title</h2>
+                                <h2>{title}</h2>
                             </div>
                             <div className="product-detail-description-text_description">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident inventore
-                                    delectus
-                                    esse tenetur, soluta ullam. Praesentium quia odio possimus eligendi.</p>
+                                <p>{description}</p>
                             </div>
                             <div className="product-detail-description-text_price">
-                                <p>$4500</p>
+                                <p>{price}</p>
                             </div>
                         </div>
                         <div className="product-detail-description-talles">

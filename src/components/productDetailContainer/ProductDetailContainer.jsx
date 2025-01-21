@@ -1,32 +1,19 @@
 import './ProductDetailContainer.scss';
-import ProductDetail from '../productDetail copy/ProductDetail';
-import UseFecth from '../../hooks/UseFetch';
+import ProductDetail from '../productDetail/ProductDetail';
+import { useEffect, useState } from 'react';
+import UseFetch from '../../hooks/UseFetch';
 
 const ProductDetailContainer = () => {
-    const { data } = UseFecth('./src/json/products.json')
 
-    const getProductById = (id) => {
-        return data.find(product => product.id === id);
-    }
-
-    const selectedProduct = getProductById(1);
-    
+    const { data } = UseFetch('./src/json/products.json');
 
     return (
         <>
-        <main>
-            {selectedProduct ? (
-                <ProductDetail 
-                    id={selectedProduct.id}
-                    title={selectedProduct.title}
-                    description={selectedProduct.description}
-                    price={selectedProduct.price}
-                    url={selectedProduct.url}
-                />
-            ) : (
-                <p>Product not found</p>
-            )}
-        </main>        
+            <main>
+                {data.map((product) => (
+                    <ProductDetail key={product.id} id={product.id} url={product.url} title={product.title} description={product.description} price={product.price} />
+                ))}
+            </main>
         </>
     )
 }

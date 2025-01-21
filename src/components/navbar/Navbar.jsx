@@ -17,9 +17,9 @@ const Navbar = () => {
         <Logo />
         <div className="nav-links">
           <ul>
-            <Link to="/ProductDetail" className="link-border-bottom">Calzado</Link>
-            <Link to="/ProductDetail" className="link-border-bottom">Hombre</Link>
-            <Link to="/ProductDetail" className="link-border-bottom">Mujer</Link>
+            <Link to="/ProductDetailEx" className="link-border-bottom">Calzado</Link>
+            <Link to="/ProductDetailEx" className="link-border-bottom">Hombre</Link>
+            <Link to="/ProductDetailEx" className="link-border-bottom">Mujer</Link>
             <Link to="/ProductDatailContainer" className="link-border-bottom">Accesorios</Link>
           </ul>
         </div>
