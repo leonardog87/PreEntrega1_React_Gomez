@@ -6,6 +6,7 @@ const UseFetch = (url) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // debugger;
                 const response = await fetch(url);
                 const result = await response.json();
                 setTimeout(() => {

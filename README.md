@@ -1,6 +1,7 @@
 Se agrego como plantilla del detalle al componente ProductDetailEx.
 Se copio y modifico la plantilla ProductDetailEx para recibir parametros.
 Se agrego como contenedor del ProductDetail al contenedor/componente ContainerProductDetail.
+Se renderiza la plantilla ProductDetail falta identificar el producto dentro del json.
 
 
 LINKS
