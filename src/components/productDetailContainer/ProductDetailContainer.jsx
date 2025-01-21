@@ -8,13 +8,37 @@ const ProductDetailContainer = () => {
     const { data } = UseFetch('http://localhost:5173/src/json/products.json');
     console.log(data)
 
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            if (data && data.length > 0) {
+                const productId = window.location.pathname.split('/').pop();
+                const product = await new Promise((resolve) => {
+                    const selected = data.find((item) => item.id === productId);
+                    resolve(selected);
+                });
+                setSelectedProduct(product);
+            }
+        };
+
+        fetchProduct();
+    }, [data]);
+
     return (
         <>
-            <main>
-                {data?.map((product) => (
-                    <ProductDetail key={product.id} id={product.id} url={product.url} title={product.title} description={product.description} price={product.price} />
-                ))}
-            </main>
+            <div>
+                {selectedProduct && (
+                    <ProductDetail 
+                        key={selectedProduct.id} 
+                        id={selectedProduct.id} 
+                        url={selectedProduct.url} 
+                        title={selectedProduct.title} 
+                        description={selectedProduct.description} 
+                        price={selectedProduct.price} 
+                    />
+                )}
+            </div>
         </>
     )
 }

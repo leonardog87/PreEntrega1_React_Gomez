@@ -31,7 +31,7 @@ function App() {
               element={<><Banner /><CarouselProducts><ProductCard /></CarouselProducts></>} />
 
             <Route
-              path="/ProductDatailContainer/"
+              path="/ProductDetailContainer/*"
               element={<><ProductDetailContainer /></>} />
 
           </Routes>
