@@ -11,7 +11,7 @@ const UseFetch = (url) => {
                 const result = await response.json();
                 setTimeout(() => {
                     setData(result);
-                }, 500);
+                }, 250);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
