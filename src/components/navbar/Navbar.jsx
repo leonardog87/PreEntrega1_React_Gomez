@@ -20,7 +20,7 @@ const Navbar = () => {
             <Link to="/ProductDetailEx" className="link-border-bottom">Calzado</Link>
             <Link to="/ProductDetailEx" className="link-border-bottom">Hombre</Link>
             <Link to="/ProductDetailEx" className="link-border-bottom">Mujer</Link>
-            <Link to="/ProductDetailContainer" className="link-border-bottom">Accesorios</Link>
+            <Link to="/ProductDetailEx" className="link-border-bottom">Accesorios</Link>
           </ul>
         </div>
         <div className="nav-menu">

@@ -5,7 +5,7 @@ const IconUser = () => {
     return (
         <>
             <a className="icon-login" href="#!">
-                <img src="./src/assets/icons/user_img.png" alt="user-img" />
+                <img src="../src/assets/icons/user_img.png" alt="user-img" />
             </a>
         </>
     )

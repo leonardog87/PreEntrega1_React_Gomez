@@ -4,7 +4,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$72.999",
-        "url": "src/assets/images/runnig-yellow.png",
+        "url": "../src/assets/images/runnig-yellow.png",
         "alt": "runnig-yellow",
         "quantity": "1",
         "sex": "men"
@@ -14,7 +14,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$89.199",
-        "url": "src/assets/images/running-black-skyblue.png",
+        "url": "../src/assets/images/running-black-skyblue.png",
         "alt": "running-black-skyblue",
         "quantity": "1",
         "sex": "men"
@@ -24,7 +24,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$95.000",
-        "url": "src/assets/images/running-grey-black-red.png",
+        "url": "../src/assets/images/running-grey-black-red.png",
         "alt": "running-grey-black-red",
         "quantity": "1",
         "sex": "women"
@@ -34,7 +34,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$88.500",
-        "url": "src/assets/images/running-red-black.png",
+        "url": "../src/assets/images/running-red-black.png",
         "alt": "running-red-black",
         "quantity": "1",
         "sex": "men"
@@ -44,7 +44,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$120.900",
-        "url": "src/assets/images/running-skyblue-orange.png",
+        "url": "../src/assets/images/running-skyblue-orange.png",
         "alt": "running-skyblue-orange",
         "quantity": "1",
         "sex": "men"
@@ -54,7 +54,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$105.000",
-        "url": "src/assets/images/running-skyblue-orange-white.png",
+        "url": "../src/assets/images/running-skyblue-orange-white.png",
         "alt": "running-skyblue-orange-white",
         "quantity": "1",
         "sex": "men"
@@ -64,7 +64,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$95.000",
-        "url": "src/assets/images/running-w-grey-pink.png",
+        "url": "../src/assets/images/running-w-grey-pink.png",
         "alt": "running-w-grey-pink",
         "quantity": "1",
         "sex": "men"
@@ -74,7 +74,7 @@
         "title": "Air Force",
         "description": "Running",
         "price": "$70.000",
-        "url": "src/assets/images/running-white.png",
+        "url": "../src/assets/images/running-white.png",
         "alt": "running-white",
         "quantity": "1",
         "sex": "women"
@@ -84,7 +84,7 @@
         "title": "Jordan",
         "description": "Street",
         "price": "$85.000",
-        "url": "src/assets/images/jordan-black-red.png",
+        "url": "../src/assets/images/jordan-black-red.png",
         "alt": "jordan-black-red",
         "quantity": "1",
         "sex": "men"
@@ -94,7 +94,7 @@
         "title": "Freedom",
         "description": "Futbol",
         "price": "$93.500",
-        "url": "src/assets/images/botin-classic.png",
+        "url": "../src/assets/images/botin-classic.png",
         "alt": "botin-classic",
         "quantity": "1",
         "sex": "men"
@@ -104,7 +104,7 @@
         "price": "$68.000",
         "title": "Elite",
         "description": "Box",
-        "url": "src/assets/images/box-blue-black.png",
+        "url": "../src/assets/images/box-blue-black.png",
         "alt": "box-blue-black",
         "quantity": "1",
         "sex": "men"
@@ -114,7 +114,7 @@
         "title": "Aventure",
         "description": "Trekking",
         "price": "$87.000",
-        "url": "src/assets/images/trekking-black.png",
+        "url": "../src/assets/images/trekking-black.png",
         "alt": "trekking-black",
         "quantity": "1",
         "sex": "men"
