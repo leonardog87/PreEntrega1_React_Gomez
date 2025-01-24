@@ -19,10 +19,10 @@ const Navbar = () => {
         <Logo />
         <div className="nav-links">
           <ul>
-            <Link className="link-border-bottom">Calzado</Link>
-            <Link className="link-border-bottom">Hombre</Link>
-            <Link className="link-border-bottom">Mujer</Link>
-            <Link className="link-border-bottom">Accesorios</Link>
+            <li><Link className="link-border-bottom">Calzado</Link></li>
+            <li><Link className="link-border-bottom">Hombre</Link></li>
+            <li><Link className="link-border-bottom">Mujer</Link></li>
+            <li><Link className="link-border-bottom">Accesorios</Link></li>
           </ul>
         </div>
         <div className="nav-menu">
