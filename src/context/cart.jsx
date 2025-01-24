@@ -4,18 +4,30 @@ export const CartContext = createContext()
 
 export function CartProvider({ children }) {
     const [cart, setCart] = useState([])
-
+    
     const showCart = () => {
         cartContainer.style.display = 'block';
-    }
+      }
 
     const hideCart = () => {
-        cartContainer.style.display = 'none'
+        cartContainer.style.display = 'none';
     }
 
     useEffect(() => {
-        const storedCart = JSON.parse(localStorage.getItem('cart'));
+        const handleClickOutside = (event) => {
+            if (cartContainer && !cartContainer.contains(event.target)) {
+                hideCart();
+            }
+        };
 
+        const closeCart = document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            closeCart;
+        };
+    }, []);
+
+    useEffect(() => {
+        const storedCart = JSON.parse(localStorage.getItem('cart'));
         if (storedCart.length > 0) {
             setCart(storedCart);
         }

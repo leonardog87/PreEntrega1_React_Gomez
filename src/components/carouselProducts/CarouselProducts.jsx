@@ -2,9 +2,7 @@ import './CarouselProducts.scss'
 import ProductCard from '../productCard/ProductCard';
 import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 import UseFetch from '../../hooks/UseFetch';
-// import { useState } from 'react';
 import { useCart } from '../../hooks/useCart';
-// import { CartProvider } from '../../context/cart';
 import { Link } from 'react-router-dom'
 
 const CarouselProducts = () => {

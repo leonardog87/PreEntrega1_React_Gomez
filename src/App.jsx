@@ -7,7 +7,6 @@ import Cart from './components/cart/Cart'
 import CarouselProducts from './components/carouselProducts/CarouselProducts'
 import { CartProvider } from './context/cart'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductDetailEx from './components/productDetailEx/ProductDetailEx'
 import ProductCard from './components/productCard/ProductCard'
 import ProductDetailContainer from './components/productDetailContainer/ProductDetailContainer'
 
@@ -17,6 +16,7 @@ function App() {
     <>
       <BrowserRouter>
         <CartProvider>
+          <Cart />
           <Announcement />
           <Navbar />
           <Routes>
@@ -24,38 +24,14 @@ function App() {
               path="/"
               element={<><Banner /><CarouselProducts /></>} />
             <Route
-              path="/ProductDetailEx"
-              element={<ProductDetailEx />} />
-            <Route
-              path="/ProductCard"
-              element={<><Banner /><CarouselProducts><ProductCard /></CarouselProducts></>} />
-
-            <Route
               path="/ProductDetailContainer/*"
               element={<><ProductDetailContainer /></>} />
-
           </Routes>
         </CartProvider>
         <footer>
           <Footer />
         </footer>
-
       </BrowserRouter>
-
-      {/* <CartProvider>
-        <Cart />
-        <header>
-          <Announcement />
-          <Navbar />
-        </header>
-        <main className="core-container">
-          <Banner />
-          <CarouselProducts />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </CartProvider> */}
     </>
   )
 }

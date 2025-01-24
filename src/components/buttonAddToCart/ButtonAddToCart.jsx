@@ -1,9 +1,11 @@
 import './ButtonAddToCart.scss'
 
-const ButtonAddToCart = ({text, id, event}) => {
+const ButtonAddToCart = ({ text, id, event }) => {
 
     return (
-        <input className="product-card-button" type="button" value={text} id={id} onClick={event}/>
+        <>
+            <input className="product-card-button" type="button" value={text} id={id} onClick={event} />
+        </>
     )
 }
 

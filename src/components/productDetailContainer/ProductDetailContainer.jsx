@@ -2,10 +2,14 @@ import './ProductDetailContainer.scss';
 import ProductDetail from '../productDetail/ProductDetail';
 import { useEffect, useState } from 'react';
 import UseFetch from '../../hooks/UseFetch';
+import { useCart } from '../../hooks/useCart';
+import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 
 const ProductDetailContainer = () => {
 
-    const { data } = UseFetch('http://localhost:5173/src/json/products.json');
+    const { data } = UseFetch('../src/json/products.json');
+    const { addToCart } = useCart();
+
     console.log(data)
 
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -29,13 +33,14 @@ const ProductDetailContainer = () => {
         <>
             <div>
                 {selectedProduct && (
-                    <ProductDetail 
-                        key={selectedProduct.id} 
-                        id={selectedProduct.id} 
-                        url={selectedProduct.url} 
-                        title={selectedProduct.title} 
-                        description={selectedProduct.description} 
-                        price={selectedProduct.price} 
+                    <ProductDetail
+                        key={selectedProduct.id}
+                        id={selectedProduct.id}
+                        url={selectedProduct.url}
+                        title={selectedProduct.title}
+                        description={selectedProduct.description}
+                        price={selectedProduct.price}
+                        event={() => addToCart(selectedProduct)}
                     />
                 )}
             </div>
