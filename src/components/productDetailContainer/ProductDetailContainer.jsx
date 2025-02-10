@@ -3,7 +3,6 @@ import ProductDetail from '../productDetail/ProductDetail';
 import { useEffect, useState } from 'react';
 import UseFetch from '../../hooks/UseFetch';
 import { useCart } from '../../hooks/useCart';
-import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 
 const ProductDetailContainer = () => {
 

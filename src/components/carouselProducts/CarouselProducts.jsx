@@ -4,9 +4,11 @@ import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 import UseFetch from '../../hooks/UseFetch';
 import { useCart } from '../../hooks/useCart';
 import { Link } from 'react-router-dom'
+import UseFetch2 from '../../hooks/database';
 
 const CarouselProducts = () => {
 
+    // const { data } = UseFetch2()
     const { data } = UseFetch('./src/json/products.json')
     const { addToCart } = useCart()
 
