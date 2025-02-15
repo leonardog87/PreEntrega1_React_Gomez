@@ -1,15 +1,41 @@
-import './CarouselProducts.scss'
+import './CarouselProducts.scss';
 import ProductCard from '../productCard/ProductCard';
 import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 import UseFetch from '../../hooks/UseFetch';
 import { useCart } from '../../hooks/useCart';
-import { Link } from 'react-router-dom'
-import UseFetch2 from '../../hooks/database';
+import { Link } from 'react-router-dom';
+
+//connect to firebase
+import { db } from '../../hooks/database';
+import React, { useEffect, useState } from 'react';
+import { getDocs, collection } from 'firebase/firestore';
+
+async function fetch() {
+    const querySnapshot = await getDocs(collection(db, 'products'));
+    const data = [];
+    querySnapshot.forEach((doc) => {
+        data.push({ id: doc.id, ...doc.data() })
+    });
+    return data;
+}
+//connect to firebase
+
 
 const CarouselProducts = () => {
 
-    // const { data } = UseFetch2()
-    const { data } = UseFetch('./src/json/products.json')
+    //connect to firebase
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const data = await fetch();
+            setData(data);
+        }
+        fetchData();
+    }, []);
+    //connect to firebase
+
+    // const { data } = UseFetch('./src/json/products.json')
     const { addToCart } = useCart()
 
     return (

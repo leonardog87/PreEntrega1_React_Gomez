@@ -20,33 +20,10 @@ const app = initializeApp(firebaseConfig);
 //DB
 const db = getFirestore(app);
 
-const UseFetch2 = async () => {
-    const collectionRef = collection(db, "products");
-    const productsSnapshot = await getDocs(collectionRef);
+export { db };
 
-    return productsSnapshot;
 
-    // const [data, setData] = useState(null);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await fetch(url);
-    //             const result = await response.json();
-    //             setTimeout(() => {
-    //                 setData(result);
-    //             }, 250);
-    //         } catch (error) {
-    //             console.error('Error fetching data:', error);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
-
-    // return { data }
-}
-
-export default UseFetch2
 
 
 
