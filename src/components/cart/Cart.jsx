@@ -6,11 +6,25 @@ import IconClose from '../iconClose/IconClose'
 import { useCart } from '../../hooks/useCart';
 import QuantityProducts from '../quantityProducts/QuantityProducts';
 import IconGarbage from '../iconGarbage/IconGarbage';
+import Swal from 'sweetalert2'
 
 const Cart = () => {
     const { cart, addToCart, lessToCart, removeToCart, sumTotalPrice, hideCart } = useCart()
 
+    const endBuy = () => {   
+        cart.length > 0 ?
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Te enviaremos tus productos cuando esten listos!",
+                showConfirmButton: false,
+                timer: 2700
+            }) :
+            Swal.fire("No tienes productos en tu carrito!");
+    }
+
     return (
+        
         <div className="cart-container" id="cartContainer">
             <div className="cart-header">
                 <div className="cart-title">
@@ -36,10 +50,11 @@ const Cart = () => {
                     <h3 id="totalCart">$ {sumTotalPrice()}</h3>
                 </div>
                 <div className="product-detail-description-talles_buyit_button-2">
-                    <ButtonAddToCart text="Finalizar Compra" id="endBuyButton" event={function print() { console.log(cart) }} />
+                    <ButtonAddToCart text="Finalizar Compra" id="endBuyButton" event={endBuy} />
                 </div>
             </div>
         </div>
+        
     )
 }
 
