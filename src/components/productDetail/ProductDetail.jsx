@@ -45,7 +45,7 @@ const ProductDetail = ({ id, url, alt, title, description, price, event }) => {
                                     <p>{description}</p>
                                 </div>
                                 <div className="product-detail-description-text_price">
-                                    <p>{price}</p>
+                                    <p>${price}</p>
                                 </div>
                             </div>
                             <div className="product-detail-description-talles">

@@ -20,7 +20,7 @@ const ProductCard = ({ children, id, url, alt, title, description, price, quanti
                         <p className="product-card-description">{description}</p>
                     </div>
                     <div className="product-card-text-component_price">
-                        <p className="product-card-price">{price}</p>
+                        <p className="product-card-price">${price}</p>
                     </div>
                 </div>
                 {children}
