@@ -3,10 +3,36 @@ import ProductDetail from '../productDetail/ProductDetail';
 import { useEffect, useState } from 'react';
 import UseFetch from '../../hooks/UseFetch';
 import { useCart } from '../../hooks/useCart';
+//connect to firebase
+import { db } from '../../hooks/database';
+import { getDocs, collection } from 'firebase/firestore';
+
+async function fetch() {
+    const querySnapshot = await getDocs(collection(db, 'products'));
+    const data = [];
+    querySnapshot.forEach((doc) => {
+        data.push({ id: doc.id, ...doc.data() })
+    });
+    return data;
+}
+
+//connect to firebase
 
 const ProductDetailContainer = () => {
 
-    const { data } = UseFetch('../src/json/products.json');
+    //connect to firebase
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const data = await fetch();
+            setData(data);
+        }
+        fetchData();
+    }, []);
+    //connect to firebase
+
+    // const { data } = UseFetch('../src/json/products.json');
     const { addToCart } = useCart();
 
     console.log(data)
