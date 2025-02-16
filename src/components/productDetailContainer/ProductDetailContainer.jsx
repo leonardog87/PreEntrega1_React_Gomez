@@ -6,6 +6,7 @@ import { useCart } from '../../hooks/useCart';
 //connect to firebase
 import { db } from '../../hooks/database';
 import { getDocs, collection } from 'firebase/firestore';
+import Loader from '../loader/loader';
 
 async function fetch() {
     const querySnapshot = await getDocs(collection(db, 'products'));
@@ -30,6 +31,7 @@ const ProductDetailContainer = () => {
         }
         fetchData();
     }, []);
+
     //connect to firebase
 
     // const { data } = UseFetch('../src/json/products.json');
@@ -53,6 +55,12 @@ const ProductDetailContainer = () => {
 
         fetchProduct();
     }, [data]);
+
+    
+    if (selectedProduct) 
+        return <ProductDetail {...selectedProduct} />;
+    else
+        return <Loader />;
 
     return (
         <>

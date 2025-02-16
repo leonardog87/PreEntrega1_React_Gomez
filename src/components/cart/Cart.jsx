@@ -11,12 +11,14 @@ import Swal from 'sweetalert2'
 const Cart = () => {
     const { cart, addToCart, lessToCart, removeToCart, sumTotalPrice, hideCart } = useCart()
 
-    const endBuy = () => {   
+    const endBuy = () => {
         cart.length > 0 ?
             Swal.fire({
                 position: "center",
                 icon: "success",
-                title: "Te enviaremos tus productos cuando esten listos!",
+                title: "Te enviaremos tus productos cuando esten listos! ",
+                text: "Gracias por tu compra!",
+                user: "success",
                 showConfirmButton: false,
                 timer: 2700
             }) :
@@ -24,7 +26,7 @@ const Cart = () => {
     }
 
     return (
-        
+
         <div className="cart-container" id="cartContainer">
             <div className="cart-header">
                 <div className="cart-title">
@@ -54,7 +56,7 @@ const Cart = () => {
                 </div>
             </div>
         </div>
-        
+
     )
 }
 
