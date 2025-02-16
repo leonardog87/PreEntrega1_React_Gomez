@@ -58,27 +58,27 @@ const ProductDetailContainer = () => {
 
     
     if (selectedProduct) 
-        return <ProductDetail {...selectedProduct} />;
+        return (
+            <>
+                <div>
+                    {selectedProduct && (
+                        <ProductDetail
+                            key={selectedProduct.id}
+                            id={selectedProduct.id}
+                            url={selectedProduct.url}
+                            title={selectedProduct.title}
+                            description={selectedProduct.description}
+                            price={selectedProduct.price}
+                            event={() => addToCart(selectedProduct)}
+                        />
+                    )}
+                </div>
+            </>
+        );
     else
         return <Loader />;
 
-    return (
-        <>
-            <div>
-                {selectedProduct && (
-                    <ProductDetail
-                        key={selectedProduct.id}
-                        id={selectedProduct.id}
-                        url={selectedProduct.url}
-                        title={selectedProduct.title}
-                        description={selectedProduct.description}
-                        price={selectedProduct.price}
-                        event={() => addToCart(selectedProduct)}
-                    />
-                )}
-            </div>
-        </>
-    )
+   
 }
 
 export default ProductDetailContainer;
