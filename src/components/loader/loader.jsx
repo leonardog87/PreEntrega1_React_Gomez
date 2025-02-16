@@ -1,10 +1,15 @@
-
+import { SpinnerCircular } from 'spinners-react';
 
 const Loader = () => {
     return (
-        <div>
-            <p>Loading...</p>
-        </div>
+        <>
+            <SpinnerCircular
+                size={50}
+                thickness={100}
+                speed={100}
+                color="rgba(170, 172, 57, 0.31)"
+                secondaryColor="rgba(0, 0, 0, 0.44)" />
+        </>
     );
 }
 
