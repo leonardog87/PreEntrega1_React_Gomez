@@ -6,7 +6,7 @@ const Loader = () => {
             <SpinnerCircular
                 size={50}
                 thickness={100}
-                speed={100}
+                speed={50}
                 color="rgba(170, 172, 57, 0.31)"
                 secondaryColor="rgba(0, 0, 0, 0.44)" />
         </>

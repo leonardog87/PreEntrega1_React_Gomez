@@ -7,34 +7,38 @@ import { useCart } from '../../hooks/useCart';
 import { db } from '../../hooks/database';
 import { getDocs, collection } from 'firebase/firestore';
 import Loader from '../loader/loader';
+import fetchFB  from '../../hooks/UseFetch';
 
-async function fetch() {
-    const querySnapshot = await getDocs(collection(db, 'products'));
-    const data = [];
-    querySnapshot.forEach((doc) => {
-        data.push({ id: doc.id, ...doc.data() })
-    });
-    return data;
-}
+
+// async function fetch() {
+//     const querySnapshot = await getDocs(collection(db, 'products'));
+//     const data = [];
+//     querySnapshot.forEach((doc) => {
+//         data.push({ id: doc.id, ...doc.data() })
+//     });
+//     return data;
+// }
 
 //connect to firebase
 
 const ProductDetailContainer = () => {
 
     //connect to firebase
-    const [data, setData] = useState([]);
 
-    useEffect(() => {
-        async function fetchData() {
-            const data = await fetch();
-            setData(data);
-        }
-        fetchData();
-    }, []);
+
+    // const [data, setData] = useState([]);
+
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         const data = await fetch();
+    //         setData(data);
+    //     }
+    //     fetchData();
+    // }, []);
 
     //connect to firebase
 
-    // const { data } = UseFetch('../src/json/products.json');
+    const { data } = fetchFB();
     const { addToCart } = useCart();
 
     console.log(data)
@@ -56,8 +60,8 @@ const ProductDetailContainer = () => {
         fetchProduct();
     }, [data]);
 
-    
-    if (selectedProduct) 
+
+    if (selectedProduct)
         return (
             <>
                 <div>
@@ -78,7 +82,7 @@ const ProductDetailContainer = () => {
     else
         return <Loader />;
 
-   
+
 }
 
 export default ProductDetailContainer;
