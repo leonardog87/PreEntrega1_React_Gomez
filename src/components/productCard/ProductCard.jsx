@@ -1,6 +1,5 @@
 import './ProductCard.scss'
 import { Link } from 'react-router-dom'
-import ProductDetail from '../productDetail/ProductDetail'
 
 const ProductCard = ({ children, id, url, alt, title, description, price, quantity }) => {
 

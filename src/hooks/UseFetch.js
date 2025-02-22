@@ -1,35 +1,8 @@
 import { useEffect, useState } from 'react';
-
-// const UseFetch = (url) => {
-//     const [data, setData] = useState(null);
-
-//     useEffect(() => {
-//         const fetchData = async () => {
-//             try {
-//                 const response = await fetch(url);
-//                 const result = await response.json();
-//                 setTimeout(() => {
-//                     setData(result);
-//                 }, 250);
-//             } catch (error) {
-//                 console.error('Error fetching data:', error);
-//             }
-//         };
-//         fetchData();
-//     }, []);
-
-//     return { data }
-// }
-
-// export default UseFetch
-
-
-//connect to firebase
 import { db } from './database';
 import { getDocs, collection } from 'firebase/firestore';
 
-
-const fetchFB = (url) => {
+const useFetch = (url) => {
     const [data, setData] = useState([]);	
 
     useEffect(() => {
@@ -37,7 +10,7 @@ const fetchFB = (url) => {
             try {
                 let result;
                 if (url) {
-                    const response = await fetch();
+                    const response = await fetch(url);
                     result = await response.json();
                 } else {
                     const querySnapshot = await getDocs(collection(db, 'products'));
@@ -59,5 +32,5 @@ const fetchFB = (url) => {
     return { data }
 }
 
-export default fetchFB;
+export default useFetch;
 

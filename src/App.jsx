@@ -7,7 +7,6 @@ import Cart from './components/cart/Cart'
 import CarouselProducts from './components/carouselProducts/CarouselProducts'
 import { CartProvider } from './context/cart'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductCard from './components/productCard/ProductCard'
 import ProductDetailContainer from './components/productDetailContainer/ProductDetailContainer'
 
 function App() {

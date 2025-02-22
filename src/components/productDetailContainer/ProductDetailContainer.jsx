@@ -1,44 +1,13 @@
 import './ProductDetailContainer.scss';
 import ProductDetail from '../productDetail/ProductDetail';
 import { useEffect, useState } from 'react';
-import UseFetch from '../../hooks/UseFetch';
+import useFetch from '../../hooks/useFetch';
 import { useCart } from '../../hooks/useCart';
-//connect to firebase
-import { db } from '../../hooks/database';
-import { getDocs, collection } from 'firebase/firestore';
 import Loader from '../loader/loader';
-import fetchFB  from '../../hooks/UseFetch';
-
-
-// async function fetch() {
-//     const querySnapshot = await getDocs(collection(db, 'products'));
-//     const data = [];
-//     querySnapshot.forEach((doc) => {
-//         data.push({ id: doc.id, ...doc.data() })
-//     });
-//     return data;
-// }
-
-//connect to firebase
 
 const ProductDetailContainer = () => {
 
-    //connect to firebase
-
-
-    // const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         const data = await fetch();
-    //         setData(data);
-    //     }
-    //     fetchData();
-    // }, []);
-
-    //connect to firebase
-
-    const { data } = fetchFB();
+    const { data } = useFetch();
     const { addToCart } = useCart();
 
     console.log(data)
@@ -60,7 +29,6 @@ const ProductDetailContainer = () => {
         fetchProduct();
     }, [data]);
 
-
     if (selectedProduct)
         return (
             <>
@@ -81,8 +49,6 @@ const ProductDetailContainer = () => {
         );
     else
         return <Loader />;
-
-
 }
 
 export default ProductDetailContainer;
