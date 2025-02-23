@@ -3,7 +3,6 @@ import ProductCard from '../productCard/ProductCard';
 import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 import useFetch from '../../hooks/useFetch';
 import { useCart } from '../../hooks/useCart';
-import React, { useEffect, useState } from 'react';
 import Loader from '../loader/loader';
 
 const CarouselProducts = () => {

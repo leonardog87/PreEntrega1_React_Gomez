@@ -25,7 +25,6 @@ const ProductDetailContainer = () => {
                 setSelectedProduct(product);
             }
         };
-
         fetchProduct();
     }, [data]);
 
