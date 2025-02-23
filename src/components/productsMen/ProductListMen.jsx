@@ -2,8 +2,7 @@ import "./ProductListMen.scss";
 import ProductCard from "../productCard/ProductCard";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../loader/loader";
-import { useEffect, useState } from "react";
-
+import Filter from "../filter/Filter";
 const ProductListMen = () => {
 
     const { data } = useFetch();
@@ -14,6 +13,7 @@ const ProductListMen = () => {
         return (
             <>
                 <div className="core-container">
+                    <Filter text="Hombre"/>
                     <div className="product-gallery-container">
                         {menProducts.map((product) => (
                             <ProductCard

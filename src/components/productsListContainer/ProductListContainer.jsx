@@ -2,6 +2,7 @@ import "./ProductListContainer.scss";
 import ProductCard from "../productCard/ProductCard";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../loader/loader";
+import Filter from "../filter/Filter";
 
 const ProductListContainer = () => {
 
@@ -11,6 +12,7 @@ const ProductListContainer = () => {
         return (
             <>
                 <div className="core-container">
+                    <Filter text="Calzado"/>
                     <div className="product-gallery-container">
                         {data.map((product) => (
                             <ProductCard
