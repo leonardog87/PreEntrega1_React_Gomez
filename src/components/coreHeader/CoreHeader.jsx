@@ -1,7 +1,13 @@
-import './Filter.scss';
+import './CoreHeader.scss';
 import { Link } from 'react-router-dom'
+import { useCart } from '../../hooks/useCart';
+import { useFilter } from '../../hooks/useFilter';
 
-const Filter = ({ text }) => {
+const CoreHeader = ({ text }) => {
+    
+    const { showCart } = useCart()
+    const { showFilter } = useFilter()
+
     return (
         <>
             <div className="core-header">
@@ -15,13 +21,13 @@ const Filter = ({ text }) => {
                         <p>{text}</p>
                     </div>
                 </div>
-                <div class="core-header-order-filter">
-                    <input type="button" id="button-modified" value="Order" />
-                    <input type="button" id="button-delete" value="Filter" />
+                <div className="core-header-order-filter">
+                    <input type="button" id="button-order" value="Orden" />
+                    <input type="button" id="button-filter" value="Filtros" onClick={showFilter} />
                 </div>
             </div>
         </>
     )
 }
 
-export default Filter;
+export default CoreHeader;

@@ -2,7 +2,8 @@ import "./ProductListMen.scss";
 import ProductCard from "../productCard/ProductCard";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../loader/loader";
-import Filter from "../filter/Filter";
+import CoreHeader from "../coreHeader/CoreHeader";
+
 const ProductListMen = () => {
 
     const { data } = useFetch();
@@ -13,7 +14,7 @@ const ProductListMen = () => {
         return (
             <>
                 <div className="core-container">
-                    <Filter text="Hombre"/>
+                    <CoreHeader text="Hombre"/>
                     <div className="product-gallery-container">
                         {menProducts.map((product) => (
                             <ProductCard

@@ -1,0 +1,23 @@
+.button-filter {
+    height: 60px;
+    width: 100%;
+
+    input {
+        height: 60px;
+        width: 100%;    
+        outline-style: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgb(190, 189, 189);
+        border-left: 1px solid rgb(190, 189, 189);
+        text-align: left;
+        cursor: pointer;
+        font-size: 15px;
+        padding-left: 2%;       
+    }
+
+    :hover {
+        border-bottom: 1px solid rgb(97, 96, 96);
+        border-left: 1px solid rgb(97, 96, 96);
+    }
+}

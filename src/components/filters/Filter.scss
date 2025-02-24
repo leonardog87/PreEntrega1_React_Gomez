@@ -1,0 +1,61 @@
+.filter-container {
+    height: 100%;
+    width: 400px;
+    background-color: white;
+    display: none;
+    outline: 1px solid rgb(201, 201, 201);
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    box-shadow: -2px 0px 5px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 0px 5px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 0px 5px -1px rgba(0, 0, 0, 0.75);
+
+    .filter-header {
+        display: flex;
+        flex-direction: row;
+        background-color: #e7e7e7;
+        padding: 0 5% 0 5%;
+        justify-content: end;
+        align-items: end;
+
+
+        .filter-title {
+            height: 57px;
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            p {
+                font-size: 15px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .filter-product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter-close {
+        height: 57px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        align-items: center;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        background: rgb(181, 180, 180);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgb(89, 89, 89);
+    }
+}

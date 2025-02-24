@@ -11,6 +11,8 @@ import ProductDetailContainer from './components/productDetailContainer/ProductD
 import ProductListContainer from './components/productsListContainer/ProductListContainer'
 import ProductListMen from './components/productsMen/ProductListMen'
 import ProductListWomen from './components/productsWomen/ProductListWomen'
+import { FilterProvider } from './context/filter'
+import Filter from './components/filters/Filter'
 
 function App() {
 
@@ -18,29 +20,33 @@ function App() {
     <>
       <BrowserRouter>
         <CartProvider>
-          <Cart />
-          <Announcement />
-          <Navbar />
-          <Routes>
-            <Route
-              path="/ProductListContainer/"
-              element={<><ProductListContainer /></>} />
+          <FilterProvider>
+            <Cart />
+            <Filter />
+            <Announcement />
+            <Navbar />
+            <Routes>
+              <Route
+                path="/ProductListContainer/"
+                element={<><ProductListContainer /></>} />
 
-            <Route
-              path="/ProductListMen/"
-              element={<><ProductListMen /></>} />
+              <Route
+                path="/ProductListMen/"
+                element={<><ProductListMen /></>} />
 
-            <Route
-              path="/ProductListWomen/"
-              element={<><ProductListWomen /></>} />
+              <Route
+                path="/ProductListWomen/"
+                element={<><ProductListWomen /></>} />
 
-            <Route
-              path="/"
-              element={<><Banner /><CarouselProducts /></>} />
-            <Route
-              path="/ProductDetailContainer/*"
-              element={<><ProductDetailContainer /></>} />
-          </Routes>
+              <Route
+                path="/"
+                element={<><Banner /><CarouselProducts /></>} />
+
+              <Route
+                path="/ProductDetailContainer/*"
+                element={<><ProductDetailContainer /></>} />
+            </Routes>
+          </FilterProvider>
         </CartProvider>
         <footer>
           <Footer />
