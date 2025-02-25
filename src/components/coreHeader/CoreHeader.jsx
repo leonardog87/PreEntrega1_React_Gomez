@@ -22,8 +22,8 @@ const CoreHeader = ({ text }) => {
                     </div>
                 </div>
                 <div className="core-header-order-filter">
-                    <input type="button" id="button-order" value="Orden" />
-                    <input type="button" id="button-filter" value="Filtros" onClick={showFilter} />
+                    {/* <input type="button" id="button-order" value="Orden" /> */}
+                    <input type="button" id="button-filter" value="Filtrar y ordenar" onClick={showFilter} />
                 </div>
             </div>
         </>
