@@ -38,6 +38,9 @@
                 text-decoration: none;
                 font-size: 15px;
                 
+                &:hover {
+                    color: rgb(100, 100, 100);
+                }
             }
         }
     }
@@ -54,6 +57,11 @@
         justify-content: center;
         background-color: transparent;
         align-items: center;
+
+        .icon-close {
+           padding-left: 17px;
+           padding-bottom: 50px;
+        }
     }
 
     ::-webkit-scrollbar {

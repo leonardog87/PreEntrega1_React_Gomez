@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Filter = () => {
 
-    const { hideFilter, selectEffect, deleteFilterOrder } = useFilter()
+    const { hideFilter, selectEffect, deleteFilterOrder, priceToLow, priceToHigh } = useFilter()
 
     return (
         <>
@@ -21,10 +21,10 @@ const Filter = () => {
                     </div>
                 </div>
                 <div id="webFilter" className="filter-product">
-                    <ButtonFilter text="PRECIO (DE MENOR A MAYOR)" id="toHigh" event={selectEffect} />
-                    <ButtonFilter text="NOVEDADES" id="newThings" event={selectEffect} />
-                    <ButtonFilter text="LOS MAS VENDIDOS" id="moreSellers" event={selectEffect} />
-                    <ButtonFilter text="PRECIO (DE MAYOR A MENOR)" id="toLow" event={selectEffect} />
+                    <ButtonFilter text="PRECIO (DE MENOR A MAYOR)" id="toHigh" event={priceToLow} />
+                    <ButtonFilter text="NOVEDADES" id="newThings"  />
+                    <ButtonFilter text="LOS MAS VENDIDOS" id="moreSellers"  />
+                    <ButtonFilter text="PRECIO (DE MAYOR A MENOR)" id="toLow" event={priceToHigh} />
                 </div>
             </div>
         </>

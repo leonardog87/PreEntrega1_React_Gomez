@@ -1,14 +1,17 @@
 import "./ProductListMen.scss";
 import ProductCard from "../productCard/ProductCard";
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 import Loader from "../loader/loader";
 import CoreHeader from "../coreHeader/CoreHeader";
+import { useFilter } from "../../hooks/useFilter";
 
 const ProductListMen = () => {
 
-    const { data } = useFetch();
+    // const { data } = useFetch();
 
-    const menProducts = data.filter(product => product.sex === 'men');
+    const { filter } = useFilter();
+
+    const menProducts = filter.filter(product => product.sex === 'men');
 
     if (menProducts.length > 0) {
         return (

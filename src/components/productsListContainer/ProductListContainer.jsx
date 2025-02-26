@@ -1,20 +1,25 @@
 import "./ProductListContainer.scss";
 import ProductCard from "../productCard/ProductCard";
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 import Loader from "../loader/loader";
 import CoreHeader from "../coreHeader/CoreHeader";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useFilter } from "../../hooks/useFilter";
 
 const ProductListContainer = () => {
 
-    const { data } = useFetch();
+    const { filter } = useFilter();
 
-    if (data.length > 0) {
+    // const { data } = useFetch();
+
+    if (filter.length > 0) {
         return (
             <>
                 <div className="core-container">
-                    <CoreHeader text="Calzado"/>
+                    <CoreHeader text="Calzado" />
                     <div className="product-gallery-container">
-                        {data.map((product) => (
+                        {filter.map((product) => (
                             <ProductCard
                                 key={product.id}
                                 id={product.id}

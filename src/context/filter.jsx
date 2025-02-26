@@ -1,8 +1,17 @@
-import { createContext, useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
+import useFetch from "../hooks/useFetch";
 
 export const FilterContext = createContext()
 
 export function FilterProvider({ children }) {
+
+    const [filter, setFilter] = useState([])
+
+    const { data } = useFetch();
+
+    useEffect(() => {
+        setFilter([...data]);
+    }, [data]);
 
     const showFilter = () => {
         filterContainer.style.display = 'block';
@@ -42,8 +51,10 @@ export function FilterProvider({ children }) {
         const elements = [toLow, toHigh, newThings, moreSellers];
 
         elements.forEach(element => {
-            element.style.borderLeft = 'none';  });
-    }   
+            element.style.borderLeft = 'none';
+        });
+        setFilter([...data]);
+    }
 
     useEffect(() => {
         selectEffect();
@@ -59,12 +70,36 @@ export function FilterProvider({ children }) {
         };
     }, []);
 
+    const priceToLow = () => {
+        const products = filter.sort((a, b) => a.price - b.price);
+        setFilter([...products]);
+    }
+
+    const priceToHigh = () => {
+        const products = data.sort((a, b) => b.price - a.price);
+        setFilter([...products]);
+    }
+
+    const filterForWomen = () => {
+        const products = data.filter(product => product.category === 'women');
+        setFilter([...products]);
+    }
+
+    const filterForMen = () => {
+        const products = data.filter(product => product.category === 'men');
+        setFilter([...products]);
+    }
+
     return (
         <FilterContext.Provider value={{
             showFilter,
             hideFilter,
             selectEffect,
-            deleteFilterOrder
+            deleteFilterOrder,
+            filter,
+            priceToLow,
+            priceToHigh,
+            filterForWomen,
         }}
         >
             {children}

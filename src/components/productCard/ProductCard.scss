@@ -1,6 +1,7 @@
 .product-card {
     background-color: transparent;
     display: flex;
+    border: 1px solid transparent;
 
     &:hover .product-card-img {
         opacity: 1;
@@ -10,8 +11,6 @@
         text-decoration: none;
         color: black;
     }
-
-
 
     .product-card-img {
         background-color: #eceff1;

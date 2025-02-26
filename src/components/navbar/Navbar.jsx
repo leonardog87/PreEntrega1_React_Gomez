@@ -11,8 +11,6 @@ const Navbar = () => {
 
   const { countItemsInCart, showCart } = useCart()
 
-  const cartContainer = document.querySelector('.cart-container');
-  
   return (
     <>
       <nav>

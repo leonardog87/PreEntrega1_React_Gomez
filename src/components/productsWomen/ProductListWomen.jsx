@@ -1,22 +1,25 @@
 import "./ProductListWomen.scss";
 import ProductCard from "../productCard/ProductCard";
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 import Loader from "../loader/loader";
 import CoreHeader from "../coreHeader/CoreHeader";
+import { useFilter } from "../../hooks/useFilter";
 
 const ProductListWomen = () => {
 
-    const { data } = useFetch();
+    // const { data } = useFetch();
 
-    const menProducts = data.filter(product => product.sex === 'women');
+    const { filter } = useFilter();
 
-    if (menProducts.length > 0) {
+    const womenProducts = filter.filter(product => product.sex === 'women');
+
+    if (womenProducts.length > 0) {
         return (
             <>
                 <div className="core-container">
                     <CoreHeader text="Mujer"/>
                     <div className="product-gallery-container">
-                        {menProducts.map((product) => (
+                        {womenProducts.map((product) => (
                             <ProductCard
                                 key={product.id}
                                 id={product.id}
