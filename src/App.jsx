@@ -13,6 +13,7 @@ import ProductListMen from './components/productsMen/ProductListMen'
 import ProductListWomen from './components/productsWomen/ProductListWomen'
 import { FilterProvider } from './context/filter'
 import Filter from './components/filters/Filter'
+import CartFinal from './components/cartFinal/CartFinal'
 
 function App() {
 
@@ -26,6 +27,10 @@ function App() {
             <Announcement />
             <Navbar />
             <Routes>
+              <Route
+                path="/CartFinal/"
+                element={<><CartFinal /></>} />
+
               <Route
                 path="/ProductListContainer/"
                 element={<><ProductListContainer /></>} />

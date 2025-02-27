@@ -3,7 +3,7 @@ import { db } from './database';
 import { getDocs, collection } from 'firebase/firestore';
 
 const useFetch = (url) => {
-    const [data, setData] = useState([]);	
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {

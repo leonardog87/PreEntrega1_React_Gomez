@@ -8,7 +8,6 @@ import { useCart } from '../../hooks/useCart'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-
   const { countItemsInCart, showCart } = useCart()
 
   return (

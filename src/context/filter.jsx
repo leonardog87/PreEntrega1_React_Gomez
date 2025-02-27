@@ -4,9 +4,7 @@ import useFetch from "../hooks/useFetch";
 export const FilterContext = createContext()
 
 export function FilterProvider({ children }) {
-
     const [filter, setFilter] = useState([])
-
     const { data } = useFetch();
 
     useEffect(() => {
@@ -58,6 +56,7 @@ export function FilterProvider({ children }) {
 
     useEffect(() => {
         selectEffect();
+
         const handleClickOutside = (event) => {
             if (filterContainer && !filterContainer.contains(event.target)) {
                 hideFilter();
@@ -98,8 +97,7 @@ export function FilterProvider({ children }) {
             deleteFilterOrder,
             filter,
             priceToLow,
-            priceToHigh,
-            filterForWomen,
+            priceToHigh
         }}
         >
             {children}

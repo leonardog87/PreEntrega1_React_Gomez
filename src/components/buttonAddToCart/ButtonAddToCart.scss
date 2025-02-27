@@ -1,0 +1,18 @@
+.button-pay {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+
+    &:hover {
+        color: #cfcfcf;
+        transition-duration: 0.3s;
+    }
+
+}

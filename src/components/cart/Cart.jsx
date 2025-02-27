@@ -7,6 +7,7 @@ import { useCart } from '../../hooks/useCart';
 import QuantityProducts from '../quantityProducts/QuantityProducts';
 import IconGarbage from '../iconGarbage/IconGarbage';
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const { cart, addToCart, lessToCart, removeToCart, sumTotalPrice, hideCart } = useCart()
@@ -52,7 +53,7 @@ const Cart = () => {
                         <h3 id="totalCart">$ {sumTotalPrice()}</h3>
                     </div>
                     <div className="product-detail-description-talles_buyit_button-2">
-                        <ButtonAddToCart text="Finalizar Compra" id="endBuyButton" event={endBuy} />
+                        <Link className="button-pay" to={"/CartFinal/"}>Carrito</Link>
                     </div>
                 </div>
             </div>
