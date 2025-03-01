@@ -4,10 +4,10 @@ export const CartContext = createContext()
 
 export function CartProvider({ children }) {
     const [cart, setCart] = useState([])
-    
+
     const showCart = () => {
         cartContainer.style.display = 'block';
-      }
+    }
 
     const hideCart = () => {
         cartContainer.style.display = 'none';
@@ -42,16 +42,24 @@ export function CartProvider({ children }) {
         if (IfExist) {
             const products = cart.map(item => {
                 if (item.id === product.id) {
-                    return { ...item, quantity: item.quantity + 1 };
+                    if (item.quantity < product.stock) {
+                        return { ...item, quantity: item.quantity + 1 };
+                    } else {
+                        alert('No more stock available');
+                        return item;
+                    }
                 }
                 return item;
             });
             setCart(products);
         } else {
-            setCart([...cart, { ...product, quantity: 1 }]);
+            if (product.stock > 0) {
+                setCart([...cart, { ...product, quantity: 1 }]);
+            } else {
+                alert('No stock available');
+            }
         }
     }
-
 
     const lessToCart = item => {
         const products = item.quantity === 1 ? item : item.quantity-- && item;

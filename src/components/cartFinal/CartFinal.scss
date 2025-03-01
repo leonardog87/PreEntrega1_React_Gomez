@@ -152,41 +152,36 @@
 
     .cart-final-container_total {
         width: 30%;
-        height: 760px;
+        height: 700px;
         padding: 1% 1% 0 1%;
-        background-color: rgba(214, 214, 214, 0.418);
-
-        .button-pay {
-            text-align: left;
-            padding-left: 2%;
-            margin: 0 0 10% 0;
-        }
-
-        .cart-final-container_total_title {
-            font-size: 15px;
-            color: black;
-            padding-bottom: 3.2%;
-        }
+        background-color: #eceff1;
 
         .cart-final-container_total_subtotal {
             color: red;
             display: flex;
             flex-direction: column;
 
+            .cart-final-container_total_title {
+                font-size: 15px;
+                color: black;
+                padding: 3% 0 3% 0;
+            }
+
             .resumen {
                 font-size: 15px;
                 color: black;
                 display: flex;
                 flex-direction: column;
-                margin: 0 0 2% 0;
+                padding-bottom: 3.2%;
             }
 
             .subtotal {
-                font-size: 15px;
+                font-size: 18px;
                 color: black;
                 display: flex;
-                flex-direction: column;
-                margin: 0 0 2% 0;
+                flex-direction: row;
+                justify-content: space-between;
+                font-weight: 600;
             }
 
             .opciones-pago {
@@ -194,8 +189,12 @@
                 color: black;
                 display: flex;
                 flex-direction: column;
-                margin: 0 0 2% 0;
             }
+        }
+
+        .button-pay {
+            text-align: left;
+            padding-left: 2%;
         }
     }
 }

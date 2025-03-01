@@ -50,7 +50,7 @@ const Cart = () => {
                 <div className="cart-bottom">
                     <div className="cart-total">
                         <h3>Total</h3>
-                        <h3 id="totalCart">$ {sumTotalPrice()}</h3>
+                        <h3 id="totalCart">${sumTotalPrice()}</h3>
                     </div>
                     <div className="product-detail-description-talles_buyit_button-2">
                         <Link className="button-pay" to={"/CartFinal/"}>Carrito</Link>

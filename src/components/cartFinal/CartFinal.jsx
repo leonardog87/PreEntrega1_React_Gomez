@@ -26,14 +26,14 @@ const CartFinal = () => {
             </div>
         );
     }
-    else return (
+    return (
         <div className="core-container">
             <div className="cart-final-container">
                 <div className="cart-final-container_core">
                     <div className="cart-final-container_core_text">
                         <div className="cart-final_title">
                             <h1>TU CARRITO</h1>
-                            <p>TOTAL ({countItemsInCart()} productos) <span style={{ fontWeight: 'bold' }}> ${sumTotalPrice()}</span></p>
+                            <p>TOTAL ({countItemsInCart()} {countItemsInCart() > 1 ? 'productos' : 'producto'}) <span style={{ fontWeight: 'bold' }}> ${sumTotalPrice()}</span></p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero inventore voluptatibus perspiciatis, dolor doloribus quaerat mollitia reiciendis earum adipisci, debitis quasi</p>
                         </div>
                         <div className="cart-final_items">
@@ -50,22 +50,24 @@ const CartFinal = () => {
                 </div>
                 <div className="cart-final-container_total">
                     <input type="button" value="Comprar / Pagar" className="button-pay" />
-                    <div className="cart-final-container_total_title">
-                        <h2>Resumen de compra</h2>
-                    </div>
                     <div className="cart-final-container_total_subtotal">
+                        <div className="cart-final-container_total_title">
+                            <h2>Resumen de compra</h2>
+                        </div>
                         <div className="resumen">
-                            <span>{countItemsInCart()} productos</span>
+                            <span>{countItemsInCart()} {countItemsInCart() > 1 ? 'productos' : 'producto'}</span>
                             <span>Entrega Gratis</span>
                         </div>
                         <div className="subtotal">
-                            <span>Total ${sumTotalPrice()}</span>
-                            <span>IVA incluido</span>
+                            <span>Total</span>
+                            <span>{sumTotalPrice()}</span>
                         </div>
-                        <div className="opciones-pago">
-                            <span>Opciones de pago</span>
-                        </div>
+                        {/* <div className="opciones-pago">
+                    <span>Opciones de pago</span>
+                </div> */}
                     </div>
+
+
                 </div>
             </div>
         </div>

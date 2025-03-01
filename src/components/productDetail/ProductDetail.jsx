@@ -1,6 +1,10 @@
 import './ProductDetail.scss';
+import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
+import { useCart } from '../../hooks/useCart';
 
 const ProductDetail = ({ id, url, alt, title, description, price, event }) => {
+
+    const { addToCart } = useCart()
 
     return (
         <>
@@ -70,7 +74,7 @@ const ProductDetail = ({ id, url, alt, title, description, price, event }) => {
                             </div>
                             <div className="product-detail-description-talles_buyit_end_section">
                                 <div className="product-detail-description-talles_buyit_button">
-                                    <input type="button" value="Agregar al Carrito" onClick={event} />
+                                    <ButtonAddToCart text="Agregar al Carrito" id="AgregarCarrito" event={event} />
                                 </div>
                                 <div className="publicity-box">
                                     <p>Hasta <span>6 cuotas sin interés</span> en bancos seleccionados</p>
