@@ -9,8 +9,6 @@ import UnexpectedError from '../unexpectedError/UnexpectedError';
 const CarouselProducts = () => {
 
     const { data, loading, error } = useFetch('', 250)
-    // const { data, loading, error } = useFetch('../src/json/products.json', 250)
-    // const { data, loading, error } = useFetch('https://api.example.com/data', 1000);
     const { addToCart } = useCart()
 
     if (loading) {

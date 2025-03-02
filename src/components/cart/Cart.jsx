@@ -53,7 +53,7 @@ const Cart = () => {
                         <h3 id="totalCart">${sumTotalPrice()}</h3>
                     </div>
                     <div className="product-detail-description-talles_buyit_button-2">
-                        <Link className="button-pay" to={"/CartFinal/"}>Carrito</Link>
+                        <Link className="button-pay" to={"/CartFinal/"}>ir al Carrito</Link>
                     </div>
                 </div>
             </div>

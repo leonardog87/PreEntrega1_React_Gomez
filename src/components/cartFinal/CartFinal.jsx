@@ -16,7 +16,7 @@ const CartFinal = () => {
                         <div className="cart-final-container_core_text">
                             <div className="cart-final_title">
                                 <h1>TU CARRITO ESTA VACIO!</h1>
-                                <p>Cuando agregues un producto al carrito, lo vas a ver aca!</p>
+                                <p style={{ marginTop: '2%'}}>Cuando agregues un producto al carrito, lo vas a ver aca!</p>
                             </div>
                         </div>
                     </div>
