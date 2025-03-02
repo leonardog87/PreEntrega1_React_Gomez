@@ -117,6 +117,18 @@
         "url": "../src/assets/images/trekking-black.png",
         "alt": "trekking-black",
         "quantity": "1",
-        "sex": "men"
+        "sex": "men",
+        "seven": "10",
+        "seven-half": "5",
+        "eight": "10",
+        "eighthalf": "5",
+        "nine": "10",
+        "ninehalf": "5",
+        "ten": "10",
+        "tenhalf": "5",
+        "eleven": "10",
+        "elevenhalf": "5",
+        "twelve": "10",
+        "twelvehalf": "5"
     }
 ]

@@ -4,11 +4,27 @@ import ButtonAddToCart from '../buttonAddToCart/ButtonAddToCart';
 import useFetch from '../../hooks/useFetch';
 import { useCart } from '../../hooks/useCart';
 import Loader from '../loader/loader';
+import UnexpectedError from '../unexpectedError/UnexpectedError';
 
 const CarouselProducts = () => {
 
-    const { data } = useFetch();
+    const { data, loading, error } = useFetch('', 250)
+    // const { data, loading, error } = useFetch('../src/json/products.json', 250)
+    // const { data, loading, error } = useFetch('https://api.example.com/data', 1000);
     const { addToCart } = useCart()
+
+    if (loading) {
+        return <Loader />;
+    }
+
+    if (error) {
+        console.log('Error:', { error });
+        return (
+            <>
+                <UnexpectedError />
+            </>
+        )
+    }
 
     if (data.length > 0) {
         return (

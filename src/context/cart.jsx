@@ -45,7 +45,7 @@ export function CartProvider({ children }) {
                     if (item.quantity < product.stock) {
                         return { ...item, quantity: item.quantity + 1 };
                     } else {
-                        alert('No more stock available');
+                        alert('No hay mas stock de este producto!');
                         return item;
                     }
                 }
@@ -56,7 +56,7 @@ export function CartProvider({ children }) {
             if (product.stock > 0) {
                 setCart([...cart, { ...product, quantity: 1 }]);
             } else {
-                alert('No stock available');
+                alert('No hay stock dispoible!');
             }
         }
     }

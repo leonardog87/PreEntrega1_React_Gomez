@@ -32,12 +32,9 @@ const CartFinal = () => {
                 <div className="cart-final-container_items">{/**cambiar */}
                     <div className="cart-final-container_items_text">{/**cambiar */}
                         <div className="cart-final-container_items_text_title">{/**cambiar */}
-                            <h1>TU CARRITO</h1>                            
-                            <div className="discount-promotion">
-                                <h3>HASTA 6 CUOTAS SIN INTERÉS</h3>
-                                <p>Pagá en 3 cuotas sin interés por compras desde $89.999 o en 6 cuotas sin interés desde $149.999</p>
-                            </div>
-                            <p><span style={{ fontWeight: '600' }}>TOTAL</span> ({countItemsInCart()} {countItemsInCart() > 1 ? 'productos' : 'producto'}) <span style={{ fontWeight: 'bold' }}> ${sumTotalPrice()}</span></p>
+                            <h1>TU CARRITO</h1>
+                            <p>TOTAL ({countItemsInCart()} {countItemsInCart() > 1 ? 'productos' : 'producto'}) <span style={{ fontWeight: 'bold' }}> ${sumTotalPrice()}</span></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero inventore voluptatibus perspiciatis, dolor doloribus quaerat mollitia reiciendis earum adipisci, debitis quasi</p>
                         </div>
                         <div className="cart-final-container_items_products">{/**cambiar */}
                             {cart?.map((product) => (
@@ -52,9 +49,8 @@ const CartFinal = () => {
                     </div>
                 </div>
                 <div className="cart-final-container_total">
-
+                    <input type="button" value="Comprar / Pagar" className="button-pay" />
                     <div className="cart-final-container_total_ticket">{/**cambiar */}
-                        <input type="button" value="Comprar / Pagar" className="button-pay" />
                         <div className="cart-final-container_total_ticket_title">
                             <h2>Resumen de compra</h2>
                         </div>
@@ -66,11 +62,6 @@ const CartFinal = () => {
                             <span>Total</span>
                             <span>{sumTotalPrice()}</span>
                         </div>
-                    </div>
-                    <div className="cart-final-container_total_options">
-                        <h4>MEDIOS DE PAGO</h4>
-                        <img alt="" src="../src/assets/icons/icons8-visa-48.png" />
-                        <img alt="" src="../src/assets/icons/icons8-mastercard-48.png" />
                     </div>
                 </div>
             </div>
