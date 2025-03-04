@@ -13,16 +13,18 @@ export function CartProvider({ children }) {
         cartContainer.style.display = 'none';
     }
 
+
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (cartContainer && !cartContainer.contains(event.target)) {
                 hideCart();
             }
         };
-
-        const closeCart = document.addEventListener('mousedown', handleClickOutside);
+    
+        document.addEventListener('mousedown', handleClickOutside);
+    
         return () => {
-            closeCart;
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
