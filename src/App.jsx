@@ -14,45 +14,48 @@ import ProductListWomen from './components/productsWomen/ProductListWomen'
 import { FilterProvider } from './context/filter'
 import Filter from './components/filters/Filter'
 import CartFinal from './components/cartFinal/CartFinal'
+import { SearchProvider } from './context/search'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <CartProvider>
-          <FilterProvider>
-            <Cart />
-            <Filter />
-            <Announcement />
-            <Navbar />
-            <Routes>
-              <Route
-                path="/CartFinal/"
-                element={<><CartFinal /></>} />
+        <SearchProvider>
+          <CartProvider>
+            <FilterProvider>
+              <Cart />
+              <Filter />
+              <Announcement />
+              <Navbar />
+              <Routes>
+                <Route
+                  path="/CartFinal/"
+                  element={<><CartFinal /></>} />
 
-              <Route
-                path="/ProductListContainer/"
-                element={<><ProductListContainer /></>} />
+                <Route
+                  path="/ProductListContainer/"
+                  element={<><ProductListContainer /></>} />
 
-              <Route
-                path="/ProductListMen/"
-                element={<><ProductListMen /></>} />
+                <Route
+                  path="/ProductListMen/"
+                  element={<><ProductListMen /></>} />
 
-              <Route
-                path="/ProductListWomen/"
-                element={<><ProductListWomen /></>} />
+                <Route
+                  path="/ProductListWomen/"
+                  element={<><ProductListWomen /></>} />
 
-              <Route
-                path="/"
-                element={<><Banner /><CarouselProducts /></>} />
+                <Route
+                  path="/"
+                  element={<><Banner /><CarouselProducts /></>} />
 
-              <Route
-                path="/ProductDetailContainer/*"
-                element={<><ProductDetailContainer /></>} />
-            </Routes>
-          </FilterProvider>
-        </CartProvider>
+                <Route
+                  path="/ProductDetailContainer/*"
+                  element={<><ProductDetailContainer /></>} />
+              </Routes>
+            </FilterProvider>
+          </CartProvider>
+        </SearchProvider>
         <footer>
           <Footer />
         </footer>

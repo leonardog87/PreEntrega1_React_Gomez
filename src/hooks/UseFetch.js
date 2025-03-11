@@ -16,8 +16,10 @@ const useFetch = (url, delay = 0) => {
                 setLoading(true);
                 setError(null);
                 let result;
+                // const signal = abortController.signal;
                 
                 if (url) {
+                    // const response = await fetch(url, { signal });
                     const response = await fetch(url, { signal: abortController.signal });
                     if (!response.ok) {
                         throw new Error(`Error: ${response.status} ${response.statusText}`);
