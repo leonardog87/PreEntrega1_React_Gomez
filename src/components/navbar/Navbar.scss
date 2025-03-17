@@ -124,6 +124,7 @@ nav {
 
 @media (min-width: 970px) {
     nav {
+        padding: 0 2.5% 0 2.5%;
         .nav-links {
             height: 105px;
             width: 400px;
@@ -143,7 +144,7 @@ nav {
                 height: 105px;
                 flex-direction: row;
                 justify-content: end;
-                padding-right: 10%; //ver
+                // padding-right: 2.5%;
 
                 .nav-icons {
                     gap: 0px;

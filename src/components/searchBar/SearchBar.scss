@@ -34,14 +34,16 @@
 }
 
 .prediction-result {
+    background-color: white;
     width: 230px;
-    height: 100%;
+    min-height: 30px;
+    max-height: 100%;
     border: 1px solid black;
     box-shadow: 0px 5px 5px 0px  rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
     color: black;
-    
+    position: absolute;
     padding-left: 15px;
     padding-top: 5px;
     list-style: none;
