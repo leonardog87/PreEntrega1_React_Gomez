@@ -27,6 +27,7 @@
 import './SearchBar.scss'
 import React, { useContext, useState } from 'react';
 import { useSearch } from '../../hooks/useSearch';
+import { Link } from 'react-router-dom';
 
 const SearchBar = () => {
     const { searchTerm, handleSearch, predictions } = useSearch();
@@ -45,9 +46,9 @@ const SearchBar = () => {
 
             {/* Mostrar las predicciones */}
             {predictions.length > 0 && (
-                <ul className='prediction-result'>
+                <ul>
                     {predictions.map((prediction, index) => (
-                        <li key={index}>{prediction} {console.log(prediction)}</li>
+                        <Link className='prediction-result' key={index}><li>{prediction}</li></Link>
                     ))}
                 </ul>
             )}

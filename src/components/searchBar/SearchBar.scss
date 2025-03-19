@@ -47,6 +47,11 @@
     padding-left: 15px;
     padding-top: 5px;
     list-style: none;
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(48, 48, 48)
+    }
 }
 
 @media (min-width: 320px) {
