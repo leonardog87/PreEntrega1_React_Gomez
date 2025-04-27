@@ -9,13 +9,8 @@ import { CartProvider } from './context/cart'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProductDetailContainer from './components/productDetailContainer/ProductDetailContainer'
 import ProductListContainer from './components/productsListContainer/ProductListContainer'
-<<<<<<< HEAD
 import ProductListMen from './components/productsListMen/ProductListMen'
 import ProductListWomen from './components/productsListWomen/ProductListWomen'
-=======
-import ProductListMen from './components/productsMen/ProductListMen'
-import ProductListWomen from './components/productsWomen/ProductListWomen'
->>>>>>> 61b411e101e9449683250763b64a0b599869604f
 import { FilterProvider } from './context/filter'
 import Filter from './components/filters/Filter'
 import CartFinal from './components/cartFinal/CartFinal'
@@ -33,13 +28,9 @@ function App() {
               <Filter />
               <Announcement />
               <Navbar />
-<<<<<<< HEAD
 
               <Routes>
 
-=======
-              <Routes>
->>>>>>> 61b411e101e9449683250763b64a0b599869604f
                 <Route
                   path="/CartFinal/"
                   element={<><CartFinal /></>} />
@@ -63,7 +54,6 @@ function App() {
                 <Route
                   path="/ProductDetailContainer/*"
                   element={<><ProductDetailContainer /></>} />
-<<<<<<< HEAD
 
                 {/* <Route
                   path="/ProductSearchContainer/*"
@@ -71,9 +61,6 @@ function App() {
 
               </Routes>
 
-=======
-              </Routes>
->>>>>>> 61b411e101e9449683250763b64a0b599869604f
             </FilterProvider>
           </CartProvider>
         </SearchProvider>

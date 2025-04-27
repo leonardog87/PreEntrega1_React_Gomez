@@ -20,11 +20,7 @@ export const SearchProvider = ({ children }) => {
             return;
         }
 
-<<<<<<< HEAD
         const firstMatch = data.filter((item) => {
-=======
-        const firstMatch = data.find((item) => {
->>>>>>> 61b411e101e9449683250763b64a0b599869604f
             return (
                 (item.title &&
                     String(item.title).toLowerCase().includes(inputValue.toLowerCase())) ||
@@ -35,18 +31,12 @@ export const SearchProvider = ({ children }) => {
 
         console.log("First Match:", firstMatch);
 
-<<<<<<< HEAD
         // const predictionResult = firstMatch
         //     ? [`${firstMatch.title} - ${firstMatch.description}`]
         //     : [];
 
         const predictionResult = firstMatch
             ? firstMatch.map(match => `${match.title} - ${match.description}`) : [];
-=======
-        const predictionResult = firstMatch
-            ? [`${firstMatch.title} - ${firstMatch.description}`]
-            : [];
->>>>>>> 61b411e101e9449683250763b64a0b599869604f
 
         console.log("Prediction Names:", predictionResult);
 
