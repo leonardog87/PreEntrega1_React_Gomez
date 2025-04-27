@@ -1,0 +1,23 @@
+.unexpectedError {
+    height: 100%;
+    width: 100%;
+    border: 10  px solid black; 
+    color: rgba(57, 57, 190, 0.808);
+    background-color: #eceff1;
+
+    h2 {
+        font-size: 57px;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-size: 30px;
+        padding-bottom: 2%;
+    }
+
+    p {
+        color: rgb(87, 87, 87);
+        font-size: 17   px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
