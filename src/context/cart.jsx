@@ -13,7 +13,6 @@ export function CartProvider({ children }) {
         cartContainer.style.display = 'none';
     }
 
-
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (cartContainer && !cartContainer.contains(event.target)) {

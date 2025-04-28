@@ -41,17 +41,17 @@
     border: 1px solid rgb(174, 174, 174);
     border-top: none;
     color: black;
-    position: absolute;
+    position: relative;
     padding-left: 15px;
     padding-top: 5px;
     list-style: none;
-    text-decoration: none;
     z-index: 9;
 
     &:hover {
         color: rgb(48, 48, 48)
     }
 }
+
 
 @media (min-width: 320px) {
     .search-bar {

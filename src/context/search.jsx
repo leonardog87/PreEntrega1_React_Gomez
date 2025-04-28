@@ -28,20 +28,13 @@ export const SearchProvider = ({ children }) => {
                     String(item.description).toLowerCase().includes(inputValue.toLowerCase()))
             );
         });
-
+        setPredictions(firstMatch)
         console.log("First Match:", firstMatch);
-
-        // const predictionResult = firstMatch
-        //     ? [`${firstMatch.title} - ${firstMatch.description}`]
-        //     : [];
-
-        const predictionResult = firstMatch
-            ? firstMatch.map(match => `${match.title} - ${match.description}`) : [];
-
-        console.log("Prediction Names:", predictionResult);
-
-        setPredictions(predictionResult);
+        console.log("Predictions:", predictions)
+        
+        //esta tomando a firstmatch como un objeto, por lo que no lo pushea a predictions
     };
+    
 
     return (
         <SearchContext.Provider

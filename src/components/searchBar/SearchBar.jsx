@@ -1,36 +1,42 @@
-// import './SearchBar.scss'
-// import React, { useState } from 'react';
-// import { useSearch } from '../../hooks/useSearch';
-
-// const SearchBar = () => {
-//     const { searchTerm, setSearchTerm, handleSearch } = useSearch();
-//     const [inputValue, setInputValue] = useState(searchTerm);   
-
-//     return (
-//         <>
-//             <form onSubmit={handleSearch} className="search-bar">
-//                 <input
-//                     type="text"
-//                     value={inputValue}
-//                     onChange={(e) => setInputValue(e.target.value, console.log(inputValue))}    
-//                     placeholder="Buscar..."
-//                 />
-//                 <a href="#!"><img src="../src/assets/icons/icon_search.png" alt="img-list1" /></a>
-//                 {/* <button type="submit">Buscar</button> */}
-//             </form>
-//         </>
-//     );
-// };
-
-// export default SearchBar;
-
 import './SearchBar.scss'
-import React, { useContext, useState } from 'react';
-import { useSearch } from '../../hooks/useSearch';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useFetch from '../../hooks/useFetch';
 
 const SearchBar = () => {
-    const { searchTerm, handleSearch, predictions } = useSearch();
+    const [searchTerm, setSearchTerm] = useState('');
+    const [predictions, setPredictions] = useState([]);
+    const { data } = useFetch('', 50);
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        setSearchTerm(e.target.value);
+        predictWord(e.target.value);
+    };
+
+    const predictWord = (inputValue) => {
+        if (!inputValue || !data || data.length === 0) {
+            setPredictions([]);
+            return;
+        }
+
+        const matchControl = data.filter((item) => {
+            return (
+                (item.title && String(item.title).toLowerCase().includes(inputValue.toLowerCase())) ||
+                (item.description && String(item.description).toLowerCase().includes(inputValue.toLowerCase()))
+            );
+        });
+
+        const uniqueMatches = matchControl.reduce((acc, current) => {
+            if (!acc.some(item => item.title === current.title)) {
+                acc.push(current);
+            }
+            return acc;
+        }, []);
+
+        setPredictions(uniqueMatches);
+        console.log("Matches únicos por título:", uniqueMatches);
+    };
 
     return (
         <div>
@@ -38,17 +44,16 @@ const SearchBar = () => {
                 <input
                     type="text"
                     value={searchTerm}
-                    onChange={handleSearch} // Actualizar el término de búsqueda
+                    onChange={handleSearch}
                     placeholder="Escribe algo..."
                 />
                 <a href="#!"><img src="../src/assets/icons/icon_search.png" alt="img-list1" /></a>
             </form>
 
-            {/* Mostrar las predicciones */}
             {predictions.length > 0 && (
-                <ul>
-                    {predictions.map((prediction, index) => (
-                        <Link className='prediction-result' key={index}><li>{prediction}</li></Link>
+                <ul style={{ position: 'absolute', textDecoration: 'none' }}>
+                    {predictions?.map((prediction) => (
+                        <Link style={{ textDecoration: 'none' }} key={prediction.id}><li className='prediction-result'>{`${prediction.title} - ${prediction.description}`}</li></Link>
                     ))}
                 </ul>
             )}
