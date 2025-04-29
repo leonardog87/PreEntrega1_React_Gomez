@@ -1,5 +1,5 @@
 import './SearchBar.scss'
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 
@@ -7,6 +7,37 @@ const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [predictions, setPredictions] = useState([]);
     const { data } = useFetch('', 50);
+    const inputRef = useRef(null);
+    const predictionResultRef = useRef(null);
+    const [showPredictions, setShowPredictions] = useState(true);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (inputRef.current && predictionResultRef.current &&
+                !inputRef.current.contains(event.target) &&
+                !predictionResultRef.current.contains(event.target)) {
+                setShowPredictions(false);
+            }
+        };
+
+        const handleInputClick = () => {
+            if (predictions.length > 0) {
+                setShowPredictions(true);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        if (inputRef.current) {
+            inputRef.current.addEventListener('click', handleInputClick);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            if (inputRef.current) {
+                inputRef.current.removeEventListener('click', handleInputClick);
+            }
+        };
+    }, [predictions]);
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -43,6 +74,7 @@ const SearchBar = () => {
             <form className='search-bar'>
                 <input
                     type="text"
+                    ref={inputRef}
                     value={searchTerm}
                     onChange={handleSearch}
                     placeholder="Escribe algo..."
@@ -50,10 +82,16 @@ const SearchBar = () => {
                 <a href="#!"><img src="../src/assets/icons/icon_search.png" alt="img-list1" /></a>
             </form>
 
-            {predictions.length > 0 && (
-                <ul style={{ position: 'absolute', textDecoration: 'none' }}>
+            {showPredictions && predictions.length > 0 && (
+                <ul
+                    id="predictionResult"
+                    ref={predictionResultRef}
+                    style={{ position: 'absolute', textDecoration: 'none' }}
+                >
                     {predictions?.map((prediction) => (
-                        <Link style={{ textDecoration: 'none' }} key={prediction.id}><li className='prediction-result'>{`${prediction.title} - ${prediction.description}`}</li></Link>
+                        <Link style={{ textDecoration: 'none' }} key={prediction.id}>
+                            <li id="predictionResult" className='prediction-result'>{`${prediction.title} - ${prediction.description}`}</li>
+                        </Link>
                     ))}
                 </ul>
             )}
