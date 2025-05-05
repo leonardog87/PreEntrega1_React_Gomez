@@ -5,7 +5,8 @@ export const FilterContext = createContext()
 
 export function FilterProvider({ children }) {
     const [filter, setFilter] = useState([])
-    const { data } = useFetch();
+    // const { data } = useFetch();
+    const { data, loading, error } = useFetch('../src/json/products.json', 250)
 
     useEffect(() => {
         setFilter([...data]);

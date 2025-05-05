@@ -6,8 +6,8 @@ import IconGarbage from '../iconGarbage/IconGarbage';
 import QuantityProducts from '../quantityProducts/QuantityProducts';
 
 const CartFinal = () => {
-
     const { cart, addToCart, lessToCart, removeToCart, sumTotalPrice, countItemsInCart } = useCart();
+    
     if (cart.length === 0) {
         return (
             <div className="core-container">

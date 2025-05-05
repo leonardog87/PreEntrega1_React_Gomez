@@ -7,7 +7,8 @@ import Loader from '../loader/loader';
 
 const ProductDetailContainer = () => {
 
-    const { data } = useFetch();
+    const { data, loading, error } = useFetch('../src/json/products.json', 250)
+    // const { data } = useFetch();
     const { addToCart } = useCart();
 
     console.log(data)

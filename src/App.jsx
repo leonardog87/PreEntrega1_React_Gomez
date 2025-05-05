@@ -15,6 +15,7 @@ import { FilterProvider } from './context/filter'
 import Filter from './components/filters/Filter'
 import CartFinal from './components/cartFinal/CartFinal'
 import { SearchProvider } from './context/search'
+import SearchResultContainer from './components/searchResultContainer/searchResultContainer'
 
 function App() {
 
@@ -55,9 +56,9 @@ function App() {
                   path="/ProductDetailContainer/*"
                   element={<><ProductDetailContainer /></>} />
 
-                {/* <Route
-                  path="/ProductSearchContainer/*"
-                  element={<><ProductSearchContainer /></>} /> */}
+                <Route
+                  path="/SearchResultContainer/*"
+                  element={<><SearchResultContainer /></>} />
 
               </Routes>
 
